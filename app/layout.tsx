@@ -3,11 +3,10 @@ import { Metadata, Viewport } from "next";
 import clsx from "clsx";
 
 import { Providers } from "./providers";
-
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import Footer from "@/components/footer";
-import Navbar from "@/components/navbar";
+import Header from "@/components/header";
 
 export const metadata: Metadata = {
   title: {
@@ -43,11 +42,9 @@ export default function RootLayout({
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="container mx-auto relative flex flex-col h-screen">
-            <Navbar />
+            <Header />
 
-            <main className="flex-grow">
-              {children}
-            </main>
+            <main className="flex-grow">{children}</main>
 
             <Footer />
           </div>
