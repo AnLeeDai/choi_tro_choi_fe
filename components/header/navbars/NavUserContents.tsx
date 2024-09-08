@@ -16,6 +16,7 @@ import {
 } from "@nextui-org/dropdown";
 import { NavbarContent } from "@nextui-org/navbar";
 import { useTheme } from "next-themes";
+import { disabledKeys } from "@/config/menu.config";
 
 export default function NavUserContents() {
   const { theme, setTheme } = useTheme();
@@ -42,7 +43,7 @@ export default function NavUserContents() {
         <DropdownMenu
           aria-label="Profile Actions"
           variant="faded"
-          disabledKeys={["theme-switch", "data-management"]}
+          disabledKeys={disabledKeys}
           onAction={(key) => {
             key === "theme-switch" && handleThemeSwitch();
           }}
