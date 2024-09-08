@@ -69,6 +69,10 @@ const navbarItems: NavbarItemType[] = [
         label: "Secret",
         href: "/others/secrec",
       },
+      {
+        label: "Công cụ",
+        href: "/others/tools",
+      },
     ],
   },
 ];
